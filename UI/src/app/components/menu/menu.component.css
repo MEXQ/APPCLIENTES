@@ -1,0 +1,22 @@
+.container {
+	background-color: white;
+}
+.nav-header {
+  height: 10em;
+  display: flex;
+  align-items: center
+}
+
+img {
+	margin: -10px;
+}
+
+@media screen and (min-width: 768px) {
+    img  {
+        margin-top: 0px;   
+         }
+}
+
+
+
+

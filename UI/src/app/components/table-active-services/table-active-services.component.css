@@ -6,3 +6,22 @@
 th {
 	text-align: center;
 }
+
+.container {
+    background-color: white;
+}
+.alert-message
+{
+    border-left: 5px solid;   
+}
+
+.alert-message h3
+{
+    margin-top: 10px;
+    padding-bottom: -10px;
+}
+.alert-message-success
+{
+    background-color: #E0EAF8;
+    border-color: #292C6B;
+}
