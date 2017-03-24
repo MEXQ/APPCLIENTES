@@ -16,7 +16,7 @@ import { TableActiveServicesInformationComponent } from './components/table-acti
 import { TableActiveServicesDetailsComponent } from './components/table-active-services-details/table-active-services-details.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { LoginService} from './login.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { LoginComponent } from './components/login/login.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

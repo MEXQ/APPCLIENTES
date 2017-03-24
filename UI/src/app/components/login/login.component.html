@@ -11,15 +11,15 @@
      
     <div class="panel-body">
 
-        <form role="form">
+        <form role="form" (submit)="logInUser()">
           
-          <div class="row" >            
-              <img style="" src="img/logo.png" width="250px" alt="">            
+          <div class="row">            
+              <img style="" src="../../img/logo.png" width="250px" alt="">            
           </div>
           
           <hr style="margin-top:10px;margin-bottom:10px;" >
 
-          <div class="alert alert-danger" id="ErrorLogin">
+          <div class="alert alert-danger"  id="ErrorLogin">
             <strong>Error!</strong> Incorrect Username or Password.
           </div>
 
@@ -29,14 +29,13 @@
 
           <div style="margin-bottom: 12px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input id="login-username" type="email" class="form-control" name="email" requiered value="" placeholder="Email">       
+            <input id="login-username" type="email"  [(ngModel)]="Usuario" class="form-control" name="email" requiered value="" placeholder="Email">       
           </div>
 
           <div style="margin-bottom: 12px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-          </div>
-                                    
+            <input id="password" type="password" [(ngModel)]="Pass" class="form-control" name="password" placeholder="Password">
+          </div>               
           <div class="input-group">
             <div class="checkbox" style="margin-top: 0px;">
               <label for="ShowHide">
@@ -45,8 +44,8 @@
             </div>
           </div>  
 
-          <button type="submit" class="btn btn-success" id="SignIn">Sign in</button>
-          
+          <button type="submit" class="btn btn-success"  id="SignIn">Sign in</button>
+          {{Usuario}}{{Pass}}
           <hr style="margin-top:10px;margin-bottom:10px;" >
   
           <div class="form-group" align="middle">

@@ -3,7 +3,7 @@
   width: 5000px;
   height: 5000px;   
   position: fixed;
-  background-image: url("img/background.jpg");
+  background-image: url("~/img/background.jpg");
 }
 
 .glassbackground {
