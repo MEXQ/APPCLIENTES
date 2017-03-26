@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 
 
-Route::post('/quote', [
+Route::post('/quotess', [
     'uses' => 'QuoteController@postQuote'
 ]);
 Route::get('/quote', [

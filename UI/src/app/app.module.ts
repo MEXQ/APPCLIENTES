@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule }   from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -17,6 +19,9 @@ import { TableActiveServicesDetailsComponent } from './components/table-active-s
 import { LoaderComponent } from './components/loader/loader.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginService} from './login.service';
+import { AppRoutingModule} from './app-routing.module';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +43,8 @@ import { LoginService} from './login.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

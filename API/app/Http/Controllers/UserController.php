@@ -4,24 +4,16 @@ namespace App\Http\Controllers;
 use App\Quote;
 use Illuminate\Http\Request;
 
-class QuoteController extends Controller
+class UserController extends Controller
 {
-    public function postQuote(Request $request)
-    {
-        $quote = new Quote();
-        $quote->content = $request->input('content');
-        $quote->save();
-        return response()->json(['quote' => $quote], 201);
-    }
+    
 
-    public function getQuotes()
+    public function getUser($usuario)
     {
-        $quotes = Quote::all();
-        $response = [
-           'quotes' => $quotes
-        ];
-        //return "it work's";
-        return response()->json($response, 200);
+        
+        return response()->json(["nombre"=>$usuario,
+            "login"=>"true"
+            ]);
     }
 
     public function putQuote(Request $request, $id)

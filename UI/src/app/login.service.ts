@@ -26,11 +26,11 @@ export class LoginService {
   getUser(usuario :string , pass: string) : Observable <Response>
   {
       return this.http
-      .get("http://www.omdbapi.com/?s=toy")
+      .get("http://127.0.0.1:8000/user/rafa")
       .catch( ()=> Observable.throw("Algo salio mal") );
 
   }
- /* parseResponse(response : Response) : response
+  /*parseResponse(response : Response) : response
   {
     if(!response.json() || response.json().Search)
     {
@@ -39,7 +39,8 @@ export class LoginService {
     }else{
 
       return response.json().Search.map(
-          this.usuario = response.
+          this.usuario = response.json["nombre"];
+          this.pass = response.json["Pass"];
         )
     }
 

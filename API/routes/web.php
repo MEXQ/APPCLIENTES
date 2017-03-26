@@ -23,3 +23,8 @@ Route::get('/papu', function () {
 Route::get('/quote', [
     'uses' => 'QuoteController@getQuotes'
 ]);
+
+
+Route::get('/user/{usuario}', [
+    'uses' => 'UserController@getUser'
+]);
