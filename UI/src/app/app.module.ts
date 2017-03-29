@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule }   from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -16,6 +18,13 @@ import { TableActiveServicesInformationComponent } from './components/table-acti
 import { TableActiveServicesDetailsComponent } from './components/table-active-services-details/table-active-services-details.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LoginComponent } from './components/login/login.component';
+import { Error404Component } from './components/error404/error404.component';
+
+import { LoginService } from './components/login/login.service';
+import { ClientService } from './components/table-clients/client.service' 
+
+import { AppRoutingModule} from './app-routing.module';
+
 
 
 @NgModule({
@@ -33,14 +42,18 @@ import { LoginComponent } from './components/login/login.component';
     TableActiveServicesDetailsComponent,
     FooterComponent,
     LoaderComponent,
-    LoginComponent
+    LoginComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+  LoginService,
+  ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
