@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Quote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class QuoteController extends Controller
 {
@@ -17,6 +18,16 @@ class QuoteController extends Controller
     public function getQuotes()
     {
         $quotes = Quote::all();
+        $response = [
+            'quotes' => $quotes
+        ];
+        return response()->json($response, 200);
+    }
+
+    public function getServices()
+    {
+        $quotes = DB::select("SELECT [User7], [EmailAddr],[CustID],[State],[Name] FROM [CustContact] WHERE ([EmailAddr] = ? and User7 = '99999')"
+        , ["yaguirre@mexq.com.mx"]);
         $response = [
             'quotes' => $quotes
         ];

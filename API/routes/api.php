@@ -18,14 +18,22 @@ use Illuminate\Http\Request;
 Route::post('/quote', [
     'uses' => 'QuoteController@postQuote'
 ]);
-Route::get('/quote', [
+Route::get('/quote/', [
     'uses' => 'QuoteController@getQuotes'
+]);
+
+Route::get('/services', [
+    'uses' => 'QuoteController@getServices'
+]);
+
+Route::get('/services/papu', [
+    'uses' => 'QuoteController@getServices'
 ]);
 
 Route::put('/quote/{id}', [
     'uses' => 'QuoteController@putQuote'
 ]);
 
-Route::delete('/quote{id}', [
+Route::delete('/quote/{id}', [
     'uses' => 'QuoteController@deleteQuote'
 ]);
